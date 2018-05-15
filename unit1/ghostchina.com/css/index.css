@@ -1,6 +1,6 @@
 
 /*header begin*/
-body{
+body,ul{
     margin: 0;
     padding: 0;
 }
@@ -15,13 +15,49 @@ body{
 }
 .header .logo{
     width: 100%;
-    height: 235px;
-    background: aqua;
+    height: 250px;
+    /*background: aqua;*/
+    background-image: url("../image/logo.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header ul{
+    list-style: none ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header .nav ul li{
+    width: 70px;
+    height: 55px;
+    /*background: aquamarine;*/
+    margin-right: 10px;
+    /*文本居中*/
+    text-align: center;
+
+    line-height: 55px;
+
+}
+.header .nav ul li:first-child{
+    border-bottom: solid 2px orangered;
+}
+.header .nav ul li a{
+    /*去掉超链接的下划线*/
+    text-decoration: none;
+    color:#505050 ;
+}
+.header .nav ul li:hover a{
+    color: orangered;
+    /*border-bottom:solid 2px orangered ;*/
 }
 .header .nav{
     width: 100%;
-    height: 85px;
-    background: bisque;
+    height: 55px;
+    background: #FFFFFF;
+
 }
 /*header end*/
 
@@ -29,7 +65,7 @@ body{
 
 
 .main{
-    width: 1002px;
+    width: 1142px;
     height: 400px;
     background: burlywood;
     /*居中*/
@@ -42,14 +78,41 @@ body{
     justify-content: space-between;
     /*行挤不开，自动换行*/
     flex-wrap: wrap;
+    margin-top: 20px;
 }
+.main .main-left p{
+    padding: 5px;
+
+}
+.main .main-left .bt1{
+    text-align: center;
+}
+.main .main-left .bt1 a{
+    font-size: 2.5em;
+    color: black;
+    text-decoration: none;
+}
+.main .main-left .bt2 {
+    text-align: center;
+    color: #959595;
+    font-size: 14px;
+}
+.main .main-left .bt2 a{
+    color: #E67E22;
+    text-decoration: none;
+}
+.main .main-left .bt3 {
+    color: #444443;
+
+}
+
 .main .main-left{
-    width: 600px;
+    width: 752px;
     height: 350px;
-    background: yellow;
+    background: #FFFFFF;
 }
 .main .main-right{
-    width: 350px;
+    width: 360px;
     height: 350px;
     background: cadetblue;
 }
@@ -58,7 +121,7 @@ body{
 /*footer begin*/
 .footer{
     width: 100%;
-    height: 100px;
-    background: black;
+    height: 300px;
+    background: #202020;
 }
 /*footer end*/
