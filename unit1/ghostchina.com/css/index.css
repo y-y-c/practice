@@ -1,6 +1,6 @@
 
 /*header begin*/
-body,ul{
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td{
     margin: 0;
     padding: 0;
 }
@@ -30,26 +30,49 @@ body,ul{
     flex-direction: row;
     justify-content: center;
 }
-.header .nav ul li{
+
+.header .nav ul li {
     width: 70px;
     height: 55px;
     /*background: aquamarine;*/
     margin-right: 10px;
     /*文本居中*/
     text-align: center;
-
     line-height: 55px;
-
 }
-.header .nav ul li:first-child{
+
+.header  .nav li:first-child{
     border-bottom: solid 2px orangered;
 }
-.header .nav ul li a{
+.header .nav-phone ul{
+    list-style: none ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header .nav-phone .line{
+    width: 100%;
+    height: 1px;
+    background: #303030;
+    margin: 30px;
+}
+.header .nav-phone ul li {
+    width: 100%;
+    height: 1px;
+    /*background: aquamarine;*/
+    font-size: 14px;
+    /*文本居中*/
+    text-align: left;
+    line-height: 55px;
+    padding: 30px;
+
+}
+.header  ul li a{
     /*去掉超链接的下划线*/
     text-decoration: none;
     color:#505050 ;
 }
-.header .nav ul li:hover a{
+.header  ul li:hover a{
     color: orangered;
     /*border-bottom:solid 2px orangered ;*/
 }
@@ -59,6 +82,12 @@ body,ul{
     background: #FFFFFF;
 
 }
+/*.header .nav-phone{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*background: #FFFFFF;*/
+
+/*}*/
 /*header end*/
 
 /*main begin*/
@@ -66,7 +95,7 @@ body,ul{
 
 .main{
     width: 1142px;
-    height: 400px;
+    height: 530px;
     background: burlywood;
     /*居中*/
     margin: auto;
@@ -116,6 +145,7 @@ body,ul{
     height: 350px;
     background: cadetblue;
 }
+
 /*main end*/
 
 /*footer begin*/
@@ -135,6 +165,7 @@ body,ul{
     color: #959595;
     padding: 30px;
     box-sizing: border-box;
+    font-size: 24px;
 
 }
 .footer .line-seperate-long{
@@ -157,6 +188,7 @@ body,ul{
 }
 .footer .footer-inner ul li{
     font-size: 12px;
+    /*color: #ebebeb;*/
     margin-right: 5px;
     margin-bottom: 5px;
     padding: 5px;
@@ -168,17 +200,47 @@ body,ul{
 /*响应式布局*/
 
 /*手机屏幕*/
-@media screen and (max-width: 750px){
+@media all and (max-width: 750px){
     .footer .footer-inner{
         width: 100%;
+        height: auto;
+    }
+    .header .nav{
+        display: none;
+    }
+    .header .nav-phone {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-image: url("../icons/list.svg");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: white;
+    }
+    .main .main-left{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .main .main-right{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
     }
 }
 /*Ipad*/
-@media screen and (min-width:750px)and (max-width: 970px){
-
+@media all and (max-width: 970px) and (min-width: 750px){
+    .footer .footer-inner{
+        width: 450px;
+    }
+    .header .nav-phone{
+        display: none;
+    }
 }
 /*pc*/
-@media screen and (min-width: 970px){
-
+@media all and (min-width: 970px){
+    .header .nav-phone{
+        display: none;
+    }
 }
 /*footer end*/

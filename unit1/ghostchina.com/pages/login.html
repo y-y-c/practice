@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/login.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="header">
+                Log in whith
+            </div>
+            <div class="img-container">
+                <div class="div-img">
+                    <img src="../image/login-github.png" alt="">
+                    <li>Github</li>
+                </div>
+                <div class="div-img">
+                    <img src="../image/login-bitbucket.png" alt="">
+                    <li>BitBucket</li>
+                </div>
+                <div class="div-img">
+                    <img src="../image/login-google.png" alt="">
+                    <li>Google</li>
+                </div>
+                <div class="div-img">
+                    <img src="../image/login-facebook.png" alt="">
+                    <li>Facebook</li>
+                </div>
+            </div>
+            <div class="line-seperate"></div>
+            <div class="or-seperate">OR</div>
+            <div class="div-form">
+                <form action="../index.html"id="login-form" onsubmit="return checkLogin()">
+                    <input type="email" class="text" id="txtEmail" placeholder="Email..." required>
+                    <input type="password" class="text" id="txtPassword" placeholder="Password..." minlength="6" required>
+                    <input type="submit" class="button" id="btnLogin" value="Log in">
+                    <a href="#">Forget your passward?</a>
+                </form>
+            </div>
+            <div class="div-alert">
+                *用户名或密码错误
+            </div>
+        </div>
+    </div>
+</body>
+</html>
